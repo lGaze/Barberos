@@ -1,0 +1,8 @@
+D:\Ponys\Barberos\Barberos\bin\Debug\Barberos.exe
+D:\Ponys\Barberos\Barberos\bin\Debug\Barberos.pdb
+D:\Ponys\Barberos\Barberos\obj\Debug\Barberos.csprojResolveAssemblyReference.cache
+D:\Ponys\Barberos\Barberos\obj\Debug\Barberos.Form1.resources
+D:\Ponys\Barberos\Barberos\obj\Debug\Barberos.Properties.Resources.resources
+D:\Ponys\Barberos\Barberos\obj\Debug\Barberos.csproj.GenerateResource.Cache
+D:\Ponys\Barberos\Barberos\obj\Debug\Barberos.exe
+D:\Ponys\Barberos\Barberos\obj\Debug\Barberos.pdb
