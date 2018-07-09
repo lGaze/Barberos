@@ -51,6 +51,11 @@
             this.Cliente2 = new System.Windows.Forms.PictureBox();
             this.Cliente1 = new System.Windows.Forms.PictureBox();
             this.btnEmpezar = new System.Windows.Forms.Button();
+            this.picCliente2 = new System.Windows.Forms.PictureBox();
+            this.Barbero2 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCliente)).BeginInit();
@@ -69,6 +74,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Cliente3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cliente2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cliente1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCliente2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Barbero2)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -77,10 +86,11 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnEmpezar, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -313,13 +323,67 @@
             // btnEmpezar
             // 
             this.btnEmpezar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEmpezar.Location = new System.Drawing.Point(530, 479);
+            this.btnEmpezar.Location = new System.Drawing.Point(97, 68);
             this.btnEmpezar.Name = "btnEmpezar";
             this.btnEmpezar.Size = new System.Drawing.Size(89, 23);
             this.btnEmpezar.TabIndex = 2;
             this.btnEmpezar.Text = "Empezar";
             this.btnEmpezar.UseVisualStyleBackColor = true;
             this.btnEmpezar.Click += new System.EventHandler(this.btnEmpezar_Click);
+            // 
+            // picCliente2
+            // 
+            this.picCliente2.BackColor = System.Drawing.Color.White;
+            this.picCliente2.Location = new System.Drawing.Point(15, 9);
+            this.picCliente2.Name = "picCliente2";
+            this.picCliente2.Size = new System.Drawing.Size(75, 81);
+            this.picCliente2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCliente2.TabIndex = 2;
+            this.picCliente2.TabStop = false;
+            this.picCliente2.Visible = false;
+            // 
+            // Barbero2
+            // 
+            this.Barbero2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Barbero2.BackColor = System.Drawing.Color.White;
+            this.Barbero2.Image = ((System.Drawing.Image)(resources.GetObject("Barbero2.Image")));
+            this.Barbero2.Location = new System.Drawing.Point(111, 9);
+            this.Barbero2.Name = "Barbero2";
+            this.Barbero2.Size = new System.Drawing.Size(75, 81);
+            this.Barbero2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Barbero2.TabIndex = 1;
+            this.Barbero2.TabStop = false;
+            this.Barbero2.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.picCliente2);
+            this.panel4.Controls.Add(this.Barbero2);
+            this.panel4.Location = new System.Drawing.Point(419, 103);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 94);
+            this.panel4.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.btnEmpezar);
+            this.panel5.Location = new System.Drawing.Point(419, 402);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 100);
+            this.panel5.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(48, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 28);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Agregarbarbero";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -351,6 +415,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Cliente3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cliente2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cliente1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCliente2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Barbero2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -379,6 +447,11 @@
         private System.Windows.Forms.PictureBox Cliente10;
         private System.Windows.Forms.PictureBox Cliente9;
         private System.Windows.Forms.Button btnEmpezar;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox picCliente2;
+        private System.Windows.Forms.PictureBox Barbero2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button1;
     }
 }
 

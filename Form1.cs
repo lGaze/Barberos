@@ -48,7 +48,8 @@ namespace Barberos
         private void btnEmpezar_Click(object sender, EventArgs e)
         {
             btnAC.Enabled = false;
-            Thread Barbero1 = new Thread(corte);  
+            
+            Thread Barbero1 = new Thread(corte);
             Barbero1.Start();
             btnAC.Enabled = true;
             
@@ -63,21 +64,78 @@ namespace Barberos
                 int corte = rnd.Next(1, 3);
                 corte = corte * 1000;
 
-                picCliente.Image = Properties.Resources.pelo_largo;
-                Clientes[j].Image = null;              
-                Thread.Sleep(1000);
-                picCliente.Image = Properties.Resources.pelo_largo;   
-                Thread.Sleep(corte);
-                picCliente.Image = null;
-                picCliente.Image = Properties.Resources.pelo_corto;
-                Thread.Sleep(1000);
-                if(j == i-1)
+                if (Barbero2.Visible == true)
                 {
+                   
+                    picCliente.Image = Properties.Resources.pelo_largo;
+                    Clientes[j].Image = null;
+                    
+                    picCliente2.Image = Properties.Resources.pelo_largo;
+                    Clientes[++j].Image = null;
+                    if(j == i)
+                    {
+                        picCliente2.Image = null ;
+                    }
+                    Thread.Sleep(1000);
+                    picCliente.Image = Properties.Resources.pelo_largo;
+                    
+                    picCliente2.Image = Properties.Resources.pelo_largo;
+                    if (j == i)
+                    {
+                        picCliente2.Image = null;
+                    }
+                    Thread.Sleep(corte);
                     picCliente.Image = null;
-                    i = 0;
+                    picCliente.Image = Properties.Resources.pelo_corto;
+                    picCliente2.Image = null;
+                    if (j == i)
+                    {
+                        picCliente2.Image = null;
+                    }
+                    else
+                    {
+                        picCliente2.Image = Properties.Resources.pelo_corto;
+                    }
+                    Thread.Sleep(1000);
+                }
+                else
+                {
+                    picCliente.Image = Properties.Resources.pelo_largo;
+                    Clientes[j].Image = null;
+                    Thread.Sleep(1000);
+                    picCliente.Image = Properties.Resources.pelo_largo;
+                    Thread.Sleep(corte);
+                    picCliente.Image = null;
+                    picCliente.Image = Properties.Resources.pelo_corto;
+                    Thread.Sleep(1000);
+                  
+                }
+                if (i % 2 != 0)
+                {
+                    if (j == i)
+                    {
+                        picCliente.Image = null;
+                        picCliente2.Image = null;
+                        i = 0;
+                    }
+                }
+                else
+                {
+                    if (j == i-1)
+                    {
+                        picCliente.Image = null;
+                        picCliente2.Image = null;
+                        i = 0;
+                    }
                 }
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Barbero2.Visible = true;
+            picCliente2.Visible = true;
+            button1.Enabled = false;
+        }
     }
 }
